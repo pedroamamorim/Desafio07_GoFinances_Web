@@ -24,7 +24,11 @@ export const CardContainer = styled.section`
 `;
 
 export const Card = styled.div`
-  background: ${({ total }: CardProps): string => (total ? '#FF872C' : '#fff')};
+  background: ${({ total }: CardProps): string =>
+    total
+      ? 'linear-gradient(20deg, hsl(52, 49%, 78%), hsl(52, 49%, 50%))'
+      : 'linear-gradient(20deg, hsl(100, 0%, 98%), hsl(100, 0%, 80%))'};
+  box-shadow: 1px 2px 5px #666;
   padding: 22px 32px;
   border-radius: 5px;
   color: ${({ total }: CardProps): string => (total ? '#fff' : '#363F5F')};
